@@ -1,0 +1,137 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我的餐券</ion-title>
+    <ion-buttons end>
+      <button ion-button  class="header-right" color="primary">
+        用餐申请
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+  <button ion-button (tap)="showToast()">toast</button>
+  <button ion-button (tap)="showToastClose()">toast close</button>
+  <div class="bg-fff">
+    <button (click)="goLogin()" ion-button >登录</button>
+    <button ion-button>Default</button>
+    <ion-list>
+      <ion-item>tom</ion-item>
+      <ion-item>jeck</ion-item>
+    </ion-list>
+    <ion-list no-lines>
+      <button ion-item>
+        <div>111</div>
+      </button>
+      <button ion-item></button>
+    </ion-list>
+    <div id="container" style=""></div>
+    <div padding="">
+      <div id="container1" ></div>
+    </div>
+
+    <div id="container2"></div>
+
+
+
+    <ion-list radio-group>
+      <ion-list-header>
+        Language
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Go</ion-label>
+        <ion-radio checked="true" value="go"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rust</ion-label>
+        <ion-radio value="rust"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Python</ion-label>
+        <ion-radio value="python" disabled="true"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item-sliding>
+        <ion-item>
+          <h2>tom</h2>
+          <p>woshi</p>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button ion-start>
+            <ion-icon name="ios-more"></ion-icon>
+            More
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <ion-list>
+
+      <ion-item *ngFor="let item of list" ion-item >{{item}}</ion-item>
+    </ion-list>
+    <!--栅格-->
+    <ion-grid>
+      <ion-row>
+        <ion-col>1</ion-col>
+        <ion-col>3</ion-col>
+        <ion-col>4</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-fab top right edge>
+      <button ion-fab mini>
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <ion-fab-list>
+        <button ion-button>
+          <ion-icon name="" ></ion-icon>
+        </button>
+      </ion-fab-list>
+    </ion-fab>
+    <ion-list>
+      <ion-item>
+        <ion-label>有户名</ion-label>
+        <ion-input type="search" clearOnEdit="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>密码</ion-label>
+        <ion-input type="password" clearOnEdit="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-datetime></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>city</ion-label>
+        <ion-select>
+          <ion-option>dd</ion-option>
+          <ion-option>ss</ion-option>
+          <ion-option>sss</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+    <ion-list radio-group>
+      <ion-item>
+        <ion-label>nan</ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>nv</ion-label>
+        <ion-radio></ion-radio>
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <div class="test" (tap)="showToastClose()">222</div>
+  <span (tap)="showAlert()">alert</span>
+</ion-footer>
